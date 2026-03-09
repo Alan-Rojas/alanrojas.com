@@ -47,13 +47,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 3. Render Project Detail Page
+// 3. Render Project Detail Page (Update this section in app.js)
     function renderProject(project) {
         const conclusionsList = project.conclusions.map(point => `<li>${point}</li>`).join("");
         
+        // Generate the YouTube iframe if an ID exists in the data
+        const videoHTML = project.youtubeId ? `
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/${project.youtubeId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        ` : '';
+
         projectContent.innerHTML = `
             <img src="${project.image}" alt="${project.title}" class="project-hero-image" onerror="this.style.display='none'">
             <h1 class="project-title">${project.title}</h1>
+            
+            ${videoHTML}
             
             ${project.disclaimer ? `<div class="disclaimer"><strong>Disclaimer:</strong> ${project.disclaimer}</div>` : ""}
             
