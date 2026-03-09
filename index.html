@@ -4,69 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alan Rojas | Data Scientist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Hey, I'm Alan Rojas 👋</h1>
-            <p class="subtitle"><strong>Data Scientist on paper, yet with a ML Engineer & SWE-Oriented heart.</strong></p>
-            <p>I build data-driven systems, optimization models, and ML tools that highly impact business.</p>
-            <blockquote class="mission-statement">
-                I'd like to emphasize that it's <strong>super important</strong> for me to see/understand how what I am building impacts the world, otherwise it feels useless and not worth investing time on.
-            </blockquote>
-        </header>
-
-        <section class="about-section">
-            <div class="about-grid">
-                <div>
-                    <h3>🔎 What I focus on:</h3>
-                    <ul>
-                        <li>Optimizing digital processes.</li>
-                        <li>Automating Information displays (Dashboards, Performance-tracking, Live Apps).</li>
-                        <li>Building AI agents for custom business-needs.</li>
-                    </ul>
+        <div id="home-view">
+            <header class="blog-intro">
+                <img src="profile-placeholder.jpg" alt="Alan Rojas" class="profile-pic" id="profile-pic">
+                <div class="intro-text">
+                    <h1>Alan Rojas</h1>
+                    <p class="subtitle">Data Scientist & ML Engineer</p>
+                    <p>I build data-driven systems, optimization models, and ML tools that impact business. I focus on optimizing digital processes, automating information displays, and building AI agents. Driven by seeing how my work impacts the real world.</p>
                 </div>
-                <div>
-                    <h3>📌 What I am working on:</h3>
-                    <ul>
-                        <li>Learning Git and GitHub on a high-level.</li>
-                        <li>Strengthening SWE skills (algorithms, APIs, backend).</li>
-                        <li>Sharpening applied ML and Statistical skills.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>😃 Hobbies:</h3>
-                    <ul class="hobbies-list">
-                        <li>Chess ♟️</li>
-                        <li>Combat Sports 🥊</li>
-                        <li>Public Speaking 🗣️</li>
-                        <li>Dancing 💃</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            </header>
 
-        <hr>
+            <section id="portfolio-grid" class="projects-grid">
+                </section>
+        </div>
 
-        <section id="portfolio">
-            <h2>Featured Projects</h2>
-            <div id="projects-container"></div>
-            
-            <h2 class="wip-header">Work in Progress</h2>
-            <div id="wip-container"></div>
-        </section>
+        <div id="project-view" style="display: none;">
+            <a href="#" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+            <div id="project-content">
+                </div>
+        </div>
 
         <hr>
 
         <footer>
-            <h2>📫 Contact info:</h2>
-            <p>Let's build something impactful together.</p>
             <div class="social-links">
-                <a href="mailto:your.email@example.com" class="btn">Email Me</a>
-                <a href="https://www.linkedin.com/in/alan-rojas0/" target="_blank" class="btn">LinkedIn</a>
-                <a href="https://github.com/yourgithub" target="_blank" class="btn">GitHub</a>
+                <a href="mailto:your.email@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/alan-rojas0/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/yourgithub" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
             </div>
         </footer>
     </div>
