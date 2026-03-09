@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const gridContainer = document.getElementById("portfolio-grid");
     const projectContent = document.getElementById("project-content");
 
+    // Helper function to translate \n and \t into HTML
+    const formatText = (text) => {
+        if (!text) return "";
+        return text.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+    };
+
     // 1. Populate Home Page Grid
     projectsData.forEach(project => {
         const card = document.createElement("a");
@@ -24,10 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 2. Routing Logic
     function handleRoute() {
-        const hash = window.location.hash.substring(1); // Remove the '#'
+        const hash = window.location.hash.substring(1); 
         
         if (hash) {
-            // Find project and show project view
             const project = projectsData.find(p => p.id === hash);
             if (project) {
                 renderProject(project);
@@ -36,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.scrollTo(0, 0);
             }
         } else {
-            // Show home view
             homeView.style.display = "block";
             projectView.style.display = "none";
             window.scrollTo(0, 0);
@@ -55,17 +59,17 @@ document.addEventListener("DOMContentLoaded", () => {
             
             <div class="project-section">
                 <h2>The Challenge</h2>
-                <p>${project.challenge}</p>
+                <p>${formatText(project.challenge)}</p>
             </div>
 
             <div class="project-section">
                 <h2>The Approach</h2>
-                <p>${project.approach}</p>
+                <p>${formatText(project.approach)}</p>
             </div>
 
             <div class="project-section">
                 <h2>Insights & Business Impact</h2>
-                <p>${project.insights}</p>
+                <p>${formatText(project.insights)}</p>
             </div>
 
             <div class="project-section">
